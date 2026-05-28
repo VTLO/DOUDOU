@@ -1,4 +1,4 @@
-# Shopify AI Toolkit
+# Shopify ia
 
 AI-powered toolkit for Shopify store management using Claude. Optimize product listings, analyze inventory, understand customers, and get smart discount recommendations — all powered by Anthropic's Claude models.
 
@@ -43,7 +43,7 @@ npm run cli -- discounts
 ## Programmatic Usage
 
 ```typescript
-import { ShopifyAIToolkit } from "@shopify/shopify-ai-toolkit";
+import { ShopifyAIToolkit } from "shopify-ia";
 
 const toolkit = ShopifyAIToolkit.fromEnv();
 

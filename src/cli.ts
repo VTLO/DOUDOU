@@ -8,8 +8,8 @@ import { ShopifyAIToolkit } from "./toolkit.js";
 const program = new Command();
 
 program
-  .name("shopify-ai")
-  .description("AI-powered toolkit for Shopify store management")
+  .name("shopify-ia")
+  .description("Shopify ia — AI-powered toolkit for Shopify store management")
   .version("0.1.0");
 
 function getToolkit() {

@@ -1,12 +1,12 @@
 {
-  "name": "@shopify/shopify-ai-toolkit",
+  "name": "shopify-ia",
   "version": "0.1.0",
-  "description": "AI-powered toolkit for Shopify store management using Claude",
+  "description": "Shopify ia — AI-powered toolkit for Shopify store management using Claude",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "shopify-ai": "dist/cli.js"
+    "shopify-ia": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc",
