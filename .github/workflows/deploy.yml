@@ -1,0 +1,49 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    if: ${{ vars.DEPLOY_ENABLED == 'true' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+        continue-on-error: true
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install
+          else
+            echo "No package.json found, skipping install"
+          fi
+
+      - name: Build
+        run: |
+          if [ -f package.json ] && npm run | grep -q "^  build"; then
+            npm run build
+          else
+            echo "No build script, skipping"
+          fi
+
+      - name: Deploy
+        run: |
+          echo "Add your deployment commands here"
+          echo "Example: deploy to cloud provider, copy to server, etc."
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
