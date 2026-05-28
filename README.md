@@ -1,16 +1,40 @@
 # Shopify ia
 
-AI-powered toolkit for Shopify store management using Claude. Optimize product listings, analyze inventory, understand customers, and get smart discount recommendations — all powered by Anthropic's Claude models.
+Boîte à outils basée sur l'IA pour la gestion des boutiques Shopify utilisant Claude. Optimisez les fiches produits, analysez les stocks, comprenez vos clients et obtenez des modèles de recommandations de remises intelligents. Le tout grâce à Claude d'Anthropic.
 
-## Features
+## Fonctionnalités
 
-- **Product Optimizer** — AI-rewritten product descriptions, SEO titles, and tag suggestions
-- **Inventory Analyzer** — Stock alerts with AI-generated reorder recommendations
-- **Customer Insights** — Segmentation, retention analysis, and growth opportunities
-- **Order Analyzer** — Revenue trends, top products, and performance insights
-- **Discount Recommender** — Targeted campaign suggestions with expected impact
+**Optimiseur de produits** Descriptions de produits réécrites par l'IA, titres SEO et suggestions de balises
 
-## Setup
+**Analyseur de stocks** Alertes de stock avec recommandations de réapprovisionnement générées par l'IA
+
+**Informations sur les clients** - Segmentation, analyse de la fidélisation et opportunités de croissance
+
+**Analyseur de commandes** et informations sur les performances Tendances des revenus, meilleurs produits,
+
+**Recommandateur de remises** Suggestions de campagnes ciblées avec impact attendu
+
+## Configuration
+
+`bash
+
+npm install
+
+cp.env.example.env
+
+# Renseignez SHOPIFY_STORE_URL, SHOPIFY_ACCESS_TOKEN,
+
+ANTHROPIC_API_KEY
+
+## Utilisation de l'interface de ligne de commande
+
+`bash
+
+# Vérification de l'état des stocks
+
+npm run cli inventory
+
+№€#€#€
 
 ```bash
 npm install
